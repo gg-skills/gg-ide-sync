@@ -1,0 +1,11 @@
+**The Four Questions**
+1. Verb: project
+2. Object: a copy machine that also reorganizes your filing system while you sleep
+3. Animal: a hyperactive octopus with a different arm for every IDE, carefully placing the right document in the right tentacle's folder without asking questions
+4. Most annoying manual task: manually opening every file in your project, figuring out which IDE surface it belongs to, rewriting it in that IDE's special format, and creating the right folder structure for it
+
+**The Reality**
+This skill is basically a hyper-organized office assistant that watches your source folders like a hawk and immediately projects every document into the exact format and folder structure that VS Code, Cursor, Windsurf, or whatever IDE you're using expects. It doesn't care about your feelings—it just takes skill definitions, agent configs, workflow shortcuts, and rule files from their "canonical" home and spews them out as IDE-native projections in`.claude/`, `.agents/`, `.windsurf/`, and whatever other dot-folder various AI tools demand. It runs in lanes like an assembly line, each lane obsessed with its own type of document, and then optionally descends into nested packages via git submodules to make sure those also get synced. Think of it as a very rigid translator who speaks five IDE dialects fluently and refuses to let you write anything by hand.
+
+**The Superpower and the Mockery**
+This skill believes it is the conductor of a symphony, ensuring every IDE plays in perfect harmony. In reality, it is a very fancy projection lamp that turns one stack of papers into five different stacks, each formatted exactly the way a different tool demands, then tells you "I fixed it" and hands you a diff report like it deserves a medal. It will happily project garbage if your source files are garbage—it doesn't validate, it just translates. And if you dare hand-edit the projected output, it will cheerfully overwrite your changes next time it runs, because in its mind, the canonical source is God and your hand edits are just peasant noise.

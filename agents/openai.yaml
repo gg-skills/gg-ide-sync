@@ -1,0 +1,10 @@
+interface:
+  display_name: GG → IDE Sync → Projection Pipeline
+  short_description: Run and maintain portable IDE sync lanes
+  icon_small: ./assets/icon-small.svg
+  icon_large: ./assets/icon-large.png
+  brand_color: '#6366f1'
+  default_prompt: >-
+    Use $ide-sync when wiring or debugging portable IDE sync for skills, agents, workflows,
+    rules, or package submodule sync commands. Read ide-sync/SKILL.md before changing sync
+    scripts.
