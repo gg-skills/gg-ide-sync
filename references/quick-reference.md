@@ -9,17 +9,17 @@ Run commands from the target repository root.
 ## Full sync
 
 ```bash
-npx tsx skills/ide-sync/scripts/sync.ts
+npx tsx .agents/skills/ide-sync/scripts/sync.ts
 ```
 
 ## Lane commands
 
 ```bash
-npx tsx skills/ide-sync/scripts/sync.ts --lane skills
-npx tsx skills/ide-sync/scripts/sync.ts --lane agents
-npx tsx skills/ide-sync/scripts/sync.ts --lane workflows
-npx tsx skills/ide-sync/scripts/sync.ts --lane rules
-npx tsx skills/ide-sync/scripts/sync.ts --lane submodules
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane skills
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane agents
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane rules
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane submodules
 ```
 
 ## Host package scripts
@@ -27,12 +27,12 @@ npx tsx skills/ide-sync/scripts/sync.ts --lane submodules
 ```json
 {
   "scripts": {
-    "sync": "npx tsx skills/ide-sync/scripts/sync.ts",
-    "skills:sync": "npx tsx skills/ide-sync/scripts/sync.ts --lane skills",
-    "agents:sync": "npx tsx skills/ide-sync/scripts/sync.ts --lane agents",
-    "workflows:sync": "npx tsx skills/ide-sync/scripts/sync.ts --lane workflows",
-    "rules:sync": "npx tsx skills/ide-sync/scripts/sync.ts --lane rules",
-    "sync:submodules": "npx tsx skills/ide-sync/scripts/sync.ts --lane submodules"
+    "sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts",
+    "skills:sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane skills",
+    "agents:sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane agents",
+    "workflows:sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows",
+    "rules:sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane rules",
+    "sync:submodules": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane submodules"
   }
 }
 ```
@@ -51,7 +51,7 @@ npx tsx skills/ide-sync/scripts/sync.ts --lane submodules
 
 ```bash
 NODE_OPTIONS='--experimental-vm-modules' npx jest --config skills/ide-sync/jest.config.ts
-npx tsx skills/ide-sync/scripts/sync.ts --lane agents --dry-run
-npx tsx skills/ide-sync/scripts/sync.ts --lane workflows --dry-run
-npx tsx skills/ide-sync/scripts/sync.ts --lane submodules --dry-run
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane agents --dry-run
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows --dry-run
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane submodules --dry-run
 ```

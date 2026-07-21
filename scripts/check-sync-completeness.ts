@@ -13,8 +13,8 @@
  * NOTE: Legacy inline usage referenced `--lane` / `--check` flags that `main()` does not parse;
  * align operator-facing docs or implement those switches if they remain advertised elsewhere.
  *
- * @testing CLI: npx tsx skills/ide-sync/scripts/check-sync-completeness.ts
- * @testing CLI: npx tsx skills/ide-sync/scripts/check-sync-completeness.ts --json
+ * @testing CLI: npx tsx .agents/skills/ide-sync/scripts/check-sync-completeness.ts
+ * @testing CLI: npx tsx .agents/skills/ide-sync/scripts/check-sync-completeness.ts --json
  *
  * @see package.json - Root npm scripts surface (`sync`, `skills:sync`, `agents:sync`, `workflows:sync`, `rules:sync`) this checker treats as wiring prerequisites for a GG IDE sync run from the repository root.
  * @see skills/ide-sync/jest.config.ts - Jest config file whose presence is used as a heuristic signal for checklist item 7 when the script scans the workspace.

@@ -75,14 +75,14 @@ The orchestrator itself (`scripts/sync.ts`) is invoked via `tsx` and spawns chil
 
 ```bash
 # Full sync — every lane in order:
-npx tsx skills/ide-sync/scripts/sync.ts
+npx tsx .agents/skills/ide-sync/scripts/sync.ts
 
 # Individual lanes:
-npx tsx skills/ide-sync/scripts/sync.ts --lane skills
-npx tsx skills/ide-sync/scripts/sync.ts --lane agents
-npx tsx skills/ide-sync/scripts/sync.ts --lane workflows
-npx tsx skills/ide-sync/scripts/sync.ts --lane rules
-npx tsx skills/ide-sync/scripts/sync.ts --lane submodules
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane skills
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane agents
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane rules
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane submodules
 ```
 
 Each lane resolves to one or more `npx tsx <script>` child invocations (see [Lane responsibilities](#lane-responsibilities) in SKILL.md for the full per-lane command list). The `submodules` lane additionally calls `npm run sync` inside each `.gitmodules`-listed package.
@@ -118,7 +118,7 @@ npm run typecheck      # tsc --noEmit
 Example — preview workflow changes without writing:
 
 ```bash
-npx tsx skills/ide-sync/scripts/sync.ts --lane workflows --dry-run
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows --dry-run
 ```
 
 ## Operational flow
@@ -188,17 +188,17 @@ Run lanes directly:
 
 ```bash
 # Full sync — every available lane, in order.
-npx tsx skills/ide-sync/scripts/sync.ts
+npx tsx .agents/skills/ide-sync/scripts/sync.ts
 
 # Individual lanes (skip the ones whose canonical source is absent).
-npx tsx skills/ide-sync/scripts/sync.ts --lane skills
-npx tsx skills/ide-sync/scripts/sync.ts --lane agents
-npx tsx skills/ide-sync/scripts/sync.ts --lane workflows
-npx tsx skills/ide-sync/scripts/sync.ts --lane rules
-npx tsx skills/ide-sync/scripts/sync.ts --lane submodules
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane skills
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane agents
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane rules
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane submodules
 
 # Dry-run is supported by some lanes (notably workflows).
-npx tsx skills/ide-sync/scripts/sync.ts --lane workflows --dry-run
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows --dry-run
 ```
 
 Recommended wiring in the **host** `package.json` (mirroring the lane names this skill itself exposes):
@@ -206,12 +206,12 @@ Recommended wiring in the **host** `package.json` (mirroring the lane names this
 ```json
 {
   "scripts": {
-    "sync": "npx tsx skills/ide-sync/scripts/sync.ts",
-    "sync:skills": "npx tsx skills/ide-sync/scripts/sync.ts --lane skills",
-    "sync:agents": "npx tsx skills/ide-sync/scripts/sync.ts --lane agents",
-    "sync:workflows": "npx tsx skills/ide-sync/scripts/sync.ts --lane workflows",
-    "sync:rules": "npx tsx skills/ide-sync/scripts/sync.ts --lane rules",
-    "sync:submodules": "npx tsx skills/ide-sync/scripts/sync.ts --lane submodules"
+    "sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts",
+    "sync:skills": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane skills",
+    "sync:agents": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane agents",
+    "sync:workflows": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows",
+    "sync:rules": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane rules",
+    "sync:submodules": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane submodules"
   }
 }
 ```

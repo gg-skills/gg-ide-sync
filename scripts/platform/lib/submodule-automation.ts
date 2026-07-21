@@ -11,7 +11,7 @@
  * const packages = PlatformSubmoduleAutomation_discoverPackages({ rootDir: process.cwd() });
  * ```
  *
- * @testing CLI: npx tsx skills/ide-sync/scripts/canonical-workflows/sync-submodule-discovery.ts (confirm each submodule with canonical workflows appears in generated prompts)
+ * @testing CLI: npx tsx .agents/skills/ide-sync/scripts/canonical-workflows/sync-submodule-discovery.ts (confirm each submodule with canonical workflows appears in generated prompts)
  * @see skills/ide-sync/scripts/canonical-workflows/sync-submodule-discovery.ts - Root workflow generator that consumes workflow-enabled package discovery.
  * @documentation reviewed=2026-05-13 standard=FILE_OVERVIEW_STANDARDS_TYPESCRIPT@3
  */

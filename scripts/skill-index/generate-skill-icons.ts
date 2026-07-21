@@ -6,7 +6,7 @@
  * `assets/icon-large.svg` exist -> patch `agents/openai.yaml` icon fields when present. The script
  * is intentionally generic and does not encode project-specific skill names or categories.
  *
- * @testing CLI: npx tsx skills/ide-sync/scripts/skill-index/generate-skill-icons.ts
+ * @testing CLI: npx tsx .agents/skills/ide-sync/scripts/skill-index/generate-skill-icons.ts
  * @see skills/ide-sync/scripts/sync.ts - Orchestrates this script in the `skills` lane.
  * @documentation reviewed=2026-05-13 standard=FILE_OVERVIEW_STANDARDS_TYPESCRIPT@3
  */

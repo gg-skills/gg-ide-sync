@@ -6,8 +6,8 @@
  * skill-owned projection scripts in the same order as the root `npm run sync` contract -> stop on the
  * first failing command with the child exit code.
  *
- * @testing CLI: npx tsx skills/ide-sync/scripts/sync.ts --dry-run
- * @testing CLI: npx tsx skills/ide-sync/scripts/sync.ts --lane skills
+ * @testing CLI: npx tsx .agents/skills/ide-sync/scripts/sync.ts --dry-run
+ * @testing CLI: npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane skills
  * @see skills/ide-sync/SKILL.md - Operator workflow and lane descriptions.
  * @documentation reviewed=2026-05-13 standard=FILE_OVERVIEW_STANDARDS_TYPESCRIPT@3
  */

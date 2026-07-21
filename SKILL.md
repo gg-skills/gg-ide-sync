@@ -42,17 +42,17 @@ Run from the target repository root:
 
 ```bash
 # Full sync, matching the composed root contract.
-npx tsx skills/ide-sync/scripts/sync.ts
+npx tsx .agents/skills/ide-sync/scripts/sync.ts
 
 # Individual lanes.
-npx tsx skills/ide-sync/scripts/sync.ts --lane skills
-npx tsx skills/ide-sync/scripts/sync.ts --lane agents
-npx tsx skills/ide-sync/scripts/sync.ts --lane workflows
-npx tsx skills/ide-sync/scripts/sync.ts --lane rules
-npx tsx skills/ide-sync/scripts/sync.ts --lane submodules
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane skills
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane agents
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane rules
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane submodules
 
 # Preview where supported by the underlying lane scripts.
-npx tsx skills/ide-sync/scripts/sync.ts --lane workflows --dry-run
+npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows --dry-run
 
 # Run the skill-owned unit tests.
 NODE_OPTIONS='--experimental-vm-modules' npx jest --config skills/ide-sync/jest.config.ts
@@ -63,12 +63,12 @@ Recommended `package.json` wiring:
 ```json
 {
   "scripts": {
-    "sync": "npx tsx skills/ide-sync/scripts/sync.ts",
-    "skills:sync": "npx tsx skills/ide-sync/scripts/sync.ts --lane skills",
-    "agents:sync": "npx tsx skills/ide-sync/scripts/sync.ts --lane agents",
-    "workflows:sync": "npx tsx skills/ide-sync/scripts/sync.ts --lane workflows",
-    "rules:sync": "npx tsx skills/ide-sync/scripts/sync.ts --lane rules",
-    "sync:submodules": "npx tsx skills/ide-sync/scripts/sync.ts --lane submodules"
+    "sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts",
+    "skills:sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane skills",
+    "agents:sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane agents",
+    "workflows:sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane workflows",
+    "rules:sync": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane rules",
+    "sync:submodules": "npx tsx .agents/skills/ide-sync/scripts/sync.ts --lane submodules"
   }
 }
 ```
